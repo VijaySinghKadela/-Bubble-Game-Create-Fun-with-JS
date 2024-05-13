@@ -38,7 +38,7 @@ function runTimer(){
         }
         else{
             clearInterval(timerint)
-            document.querySelector('#pbtm').innerHTML = "";
+            document.querySelector('#pbtm').innerHTML = `<h1>GAME OVER</h1>`;
         }
     }, 1000);
 }
