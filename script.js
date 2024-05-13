@@ -1,6 +1,6 @@
 let Timer = 60;
 let Score  = 0;
-
+let hitrn = 0;
 
 function increaseScore(){
     Score += 10;
@@ -13,8 +13,8 @@ function increaseScore(){
 
 
 function getNewHit(){
-    let rn = Math.floor(Math.random()*10);
-    document.querySelector('#hitval').textContent = rn;
+    let hitrn = Math.floor(Math.random()*10);
+    document.querySelector('#hitval').textContent = hitrn;
 }
 
 
@@ -38,11 +38,21 @@ function runTimer(){
         }
         else{
             clearInterval(timerint)
+            document.querySelector('#pbtm').innerHTML = "";
         }
     }, 1000);
 }
 
 
+document.querySelector('#pbtm')
+.addEventListener("click",function(dets){
+    let Clickednum = Number(dets.target.textContent)
+    if(Clickednum === hitrn){
+        increaseScore()
+        makeBubble()
+        getNewHit()
+    }
+})
 
 
 runTimer()
