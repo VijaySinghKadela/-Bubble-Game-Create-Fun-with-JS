@@ -7,11 +7,6 @@ function increaseScore(){
     document.querySelector('#Scoreval').textContent = Score;
 }
 
-
-
-
-
-
 function getNewHit(){
     let hitrn = Math.floor(Math.random()*10);
     document.querySelector('#hitval').textContent = hitrn;
